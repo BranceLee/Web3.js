@@ -76,7 +76,7 @@ var abi = [
 
 *  type:通常代指事件类型；
 *  name:即事件本身的名字；
-*  inputs:它是一个数组对象，且每一个对象都办函一下个参数:
+*  inputs:它是一个数组对象，且每一个对象都包含以下几个参数:
     *  name:参数名
     *  type:参数，数据类型
     *  indexed：true if the field is part of the log’s topics, false if it one of the log’s data segment.（不太知道怎么翻译）
