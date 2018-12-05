@@ -1,6 +1,6 @@
 # Web3.js
 Blockchain javascript
-最近开始试着学习Web3.js ，本文主要来自[https://web3js.readthedocs],有翻译不好的地方多多指教。
+最近开始试着学习Web3.js 
 ### Promises Events
 
    PromiEvents 的运行方式就像一个具有on, once , off 的promise 函数 
@@ -132,3 +132,32 @@ Web3.modules
 }
 ```
 
+#### web3 object
+   实例化Web3 类，生成对象
+```js
+var Web3=require('web3') 
+
+var web3 =New Web3( Web3.givenProvider || 'ws://some.local-or-remote.node:8546' )
+
+>web3.eth
+>web3.shh
+>web3.bzz
+>web3.utils
+>web3.version
+```
+<u></u>
+### Ethereum for web developers 以太坊对于前端开发的一些相关信息
+
+  如图所示：
+  ![48a6ae5235ace9fe0d905105ec7ea7fc.png](https://cdn-images-1.medium.com/max/1760/1*hPV1rCWFXYjeDI6Yd_G-iA.png)
+  
+ 通常网站应用会寄托在一个 hosting provider（托管供应商）例如Awson,or vps 等，所有的这些客户端user都交互这一个中心化的服务，The client can be a browser, 或者一个api，这些请求都会消耗占用你的服务。如图所示，一个user 向服务发起请求，服务does it's magic ，然后告诉数据库或者cache(高速缓存)，提取（读，写，更新） 数据库然后在返回给user 端。
+ 中心化的网络大多情况work 的都还是很不错的，中心化really helpful if that database was publicy and securely accessible by everyone,并且如果你也不用weapp 的owner 拿你的流量数据怎么分析的化，都还是可以的。
+ 但是举个栗子，你辛辛苦苦运营的一个公众号，有几十万的粉丝，结果微信说你违规操作，要封你号，或者goverment 一声令下凉凉，所以中心化的一个节点不够稳定，他依赖了企业背书，不是太稳。
+ This is how an Ethereum Dapp 的一个框图：
+ ![261e32f99902b8c969f8e3a35487866a.png](https://cdn-images-1.medium.com/max/1760/1*y7Cdz1uGBGLxZ3ekIE13RA.png)
+ 
+  有没有发现，每一个client 浏览器对应的通信都有他自己的 instance of the application (instance1 ,instance2).这儿没有中心化的服务器来连接所有的user ，取而代之的是一份整条的blockchain running on their devices.换句话说在你使用该应用时，你不得不下载整条链，然后使用该应用。This might sound ridiculous ，确实挺荒谬的，但是它具有不依靠中心化的服务呀😂。
+  In reality, you don’t need to spend lot of your hard disk and RAM downloading the entire blockchain. There are a few workarounds/optimizations to keep the application decentralized yet make the interaction quick and easy.
+  待续Loading...
+  
